@@ -174,6 +174,12 @@
     transition:transform 0.2s ease, box-shadow 0.2s ease;
   }
   .nav-cta:hover{ transform:translateY(-1px); box-shadow:0 12px 24px -8px rgba(62,122,144,0.65); }
+  .nav-cta-wrap{ display:flex; flex-direction:column; align-items:center; gap:0.3rem; }
+  .nav-cta-note{
+    font-family:"Work Sans", sans-serif;
+    font-size:0.62rem; line-height:1.25; letter-spacing:0.02em;
+    color:var(--ink-soft); text-align:center; max-width:13rem;
+  }
 
   /* ---------- hero ---------- */
   .hero{
@@ -430,16 +436,18 @@
       <button type="button" data-lang="en" aria-pressed="false">EN</button>
       <button type="button" data-lang="fr" aria-pressed="false">FR</button>
     </div>
-    <a class="nav-cta" href="#" data-i18n="nav.rsvp" data-rsvp-link>Confirmar asistencia</a>
+    <div class="nav-cta-wrap">
+      <a class="nav-cta" href="#" data-i18n="nav.rsvp" data-rsvp-link>Confirmar asistencia</a>
+      <span class="nav-cta-note" data-i18n="nav.rsvpNote">cuanto antes mejor para reservas de camping</span>
+    </div>
   </div>
 </header>
 
 <main>
   <section class="hero">
-    <p class="hero-eyebrow" data-i18n="hero.eyebrow">Nos casamos</p>
     <h1 class="hero-names" data-i18n="hero.names">Aida e Iñaki</h1>
-    <p class="hero-date" data-i18n="hero.date">18 de septiembre de 2027</p>
-    <p class="hero-sub" data-i18n="hero.sub">Del 17 al 19 de septiembre os esperamos en Deva, Asturias, entre el Cantábrico y el verde de las montañas, para celebrar con quien queremos cerca.</p>
+    <p class="hero-date" data-i18n="hero.date">17 a 19 de septiembre de 2027</p>
+    <p class="hero-sub" data-i18n="hero.sub">Os esperamos en Gijón, Asturias, entre el Cantábrico y el verde de las montañas, para celebrar con quienes queremos cerca.</p>
     <div class="hero-scroll">
       <span data-i18n="hero.scroll">Desliza</span>
       <span class="line"></span>
@@ -450,23 +458,23 @@
     <div class="card reveal">
       <p class="eyebrow" data-i18n="intro.eyebrow">Bienvenidos</p>
       <h2 data-i18n="intro.title">Un fin de semana para compartir</h2>
-      <p data-i18n="intro.body">Llevamos tiempo pensando en cómo disfrutar al máximo de esta oportunidad de juntar nuestros mundos: un plan muy nuestro, aprovechar la convivencia de camping, nuestra gente, música, comida rica, mar de fondo y la montaña en lo alto del valle. Hemos organizado tres días en Deva, cerca de Gijón, para compartir juntos este momento de celebración. Aquí tenéis todo lo necesario para poder acompañarnos: cómo llegar, dónde dormir y qué vamos a hacer.</p>
+      <p data-i18n="intro.body">Llevamos tiempo con ganas de este fin de semana: sidra, sobremesas largas, mar de fondo y la montaña en lo alto del valle. Hemos organizado tres días en Deva, al lado de Gijón, para quien quiera acompañarnos, y con una ceremonia tradicional asturiana para compartir comida, música y baile juntos. Aquí tenéis todo lo necesario para venir tranquilos: cómo llegar, dónde dormir y qué vamos a hacer.</p>
     </div>
   </section>
 
   <section class="section rsvp">
     <div class="card reveal">
-      <p class="eyebrow" data-i18n="rsvp.eyebrow">¿Contamos con vosotros?</p>
+      <p class="eyebrow" data-i18n="rsvp.eyebrow">Antes de nada</p>
       <h2 data-i18n="rsvp.title">Confirmadnos que venís</h2>
-      <p data-i18n="rsvp.body">Por favor, rellenad el formulario con vuestros datos, si venís acompañados y si tenéis alguna alergia o necesidad especial. Nos ayuda muchísimo a organizarlo todo con tiempo.</p>
+      <p data-i18n="rsvp.body">Rellenad el formulario con vuestros datos, si venís acompañados y si tenéis alguna alergia o necesidad especial. Nos ayuda muchísimo a organizarlo todo con tiempo.</p>
       <a class="rsvp-btn" href="#" data-i18n="rsvp.button" data-rsvp-link>Ir al formulario</a>
     </div>
   </section>
 
   <section class="section plan">
     <p class="eyebrow plan-eyebrow" data-i18n="plan.eyebrow">El plan</p>
-    <h2 class="reveal" data-i18n="plan.title">Tres días en Deva</h2>
-    <p class="plan-intro reveal" data-i18n="plan.intro">Podéis venir solo el sábado o quedaros el fin de semana entero. Nosotros estaremos alojados en el Camping de Deva. Esto es lo que tenemos pensado:</p>
+    <h2 class="reveal" data-i18n="plan.title">Tres días en Gijón</h2>
+    <p class="plan-intro reveal" data-i18n="plan.intro">Podéis venir solo el sábado o quedaros el fin de semana entero, alojados en el Camping de Deva. Esto es lo que tenemos pensado:</p>
 
     <div class="timeline">
       <div class="t-item reveal">
@@ -474,23 +482,23 @@
         <div class="t-body">
           <h3 data-i18n="plan.i1.title">Parrillada de bienvenida</h3>
           <span class="t-place">Camping de Deva</span>
-          <p class="t-desc" data-i18n="plan.i1.desc">Primer contacto con barbacoa, sidra y sobremesa larga, en el camping.</p>
+          <p class="t-desc" data-i18n="plan.i1.desc">Primer contacto con parrillada, sidra y sobremesa larga, en el camping.</p>
         </div>
       </div>
       <div class="t-item reveal">
         <span class="t-date" data-i18n="plan.i2.date">Sáb 18 · mañana</span>
         <div class="t-body">
-          <h3 data-i18n="plan.i2.title"> Despertar lento, paseo, yoga y pádel</h3>
+          <h3 data-i18n="plan.i2.title">Algún juego, tomar algo y mucho rato para estar juntos</h3>
           <span class="t-place">Camping de Deva</span>
-          <p class="t-desc" data-i18n="plan.i2.desc">Para quien despejarnos antes de la tarde grande. Yoga suave y unas palas, a vuestro ritmo.</p>
+          <p class="t-desc" data-i18n="plan.i2.desc">Para quien quiera despejarse antes de la tarde grande, un paseo hacia la playa, o algún deporte a vuestro ritmo.</p>
         </div>
       </div>
       <div class="t-item reveal">
-        <span class="t-date" data-i18n="plan.i3.date">Sáb 18</span>
+        <span class="t-date" data-i18n="plan.i3.date">Sáb 18 · tarde</span>
         <div class="t-body">
-          <h3 data-i18n="plan.i3.title">Ceremonia y celebración</h3>
-          <span class="t-place">Llagar El Trole, Deva</span>
-          <p class="t-desc" data-i18n="plan.i3.desc">La boda. Ceremonia, comida, sidra escanciada y fiesta hasta que el cuerpo aguante.</p>
+          <h3 data-i18n="plan.i3.title">Ceremonia y celebración en el llagar El Trole</h3>
+          <span class="t-place">Gijón</span>
+          <p class="t-desc" data-i18n="plan.i3.desc">La celebración. Música, comida, sidra escanciada y fiesta hasta que el cuerpo aguante. Nos gustaría cantar y tocar con vosotras y vosotros.</p>
         </div>
       </div>
       <div class="t-item reveal">
@@ -498,7 +506,7 @@
         <div class="t-body">
           <h3 data-i18n="plan.i4.title">Desayuno con comentada</h3>
           <span class="t-place">Camping de Deva</span>
-          <p class="t-desc" data-i18n="plan.i4.desc">Café, repaso de la noche anterior y una despedida tranquila antes de volver a casa.</p>
+          <p class="t-desc" data-i18n="plan.i4.desc">Café, resumen de la noche anterior y una despedida tranquila antes de volver a casa. La playa está cerca para despedirse de Asturias.</p>
         </div>
       </div>
     </div>
@@ -516,7 +524,7 @@
         </h3>
         <span class="l-tag" data-i18n="stay.primaryLabel">Recomendado</span>
         <p class="l-primary-title">Camping de Deva</p>
-        <p data-i18n="stay.primaryDesc">Nuestra opción para el fin de semana completo: bungalós y parcelas a un paseo del llagar. Aquí serán también la parrillada, el yoga/pádel y el desayuno del domingo.</p>
+        <p data-i18n="stay.primaryDesc">Nuestra opción para el fin de semana completo: bungalós y parcelas a un paseo del llagar, y el punto de encuentro para todo lo que haremos fuera de la ceremonia.</p>
         <p data-i18n="stay.altIntro">Si preferís algo más urbano, Gijón está muy cerca y tiene muchas opciones, entre ellas:</p>
         <ul class="hotel-list">
           <li>Hotel Begoña</li>
@@ -565,22 +573,22 @@
 (function(){
   var dict = {
     "nav.rsvp": { es:"Confirmar asistencia", en:"RSVP", fr:"Confirmer sa venue" },
-    "hero.eyebrow": { es:"Nos casamos", en:"We're getting married", fr:"On se marie" },
+    "nav.rsvpNote": { es:"cuanto antes mejor para reservas de camping", en:"the sooner the better for camping bookings", fr:"le plus tôt possible pour les réservations du camping" },
     "hero.names": { es:"Aida e Iñaki", en:"Aida &amp; Iñaki", fr:"Aida &amp; Iñaki" },
-    "hero.date": { es:"18 de septiembre de 2027", en:"September 18, 2027", fr:"18 septembre 2027" },
+    "hero.date": { es:"17 a 19 de septiembre de 2027", en:"September 17–19, 2027", fr:"17–19 septembre 2027" },
     "hero.sub": {
-      es:"Del 17 al 19 de septiembre os esperamos en Deva, Asturias, entre el Cantábrico y el verde de las montañas, para celebrar con quien queramos cerca.",
-      en:"From September 17th to 19th, we'll be in Deva, Asturias, between the Cantabrian Sea and the green hills, celebrating with everyone we love close by.",
-      fr:"Du 17 au 19 septembre, nous vous attendons à Deva, dans les Asturies, entre la mer Cantabrique et les collines vertes, pour célébrer entourés de ceux qu'on aime."
+      es:"Os esperamos en Gijón, Asturias, entre el Cantábrico y el verde de las montañas, para celebrar con quienes queremos cerca.",
+      en:"We'll be in Gijón, Asturias, between the Cantabrian Sea and the green hills, celebrating with everyone we love close by.",
+      fr:"Nous vous attendons à Gijón, dans les Asturies, entre la mer Cantabrique et les collines vertes, pour célébrer entourés de ceux qu'on aime."
     },
     "hero.scroll": { es:"Desliza", en:"Scroll", fr:"Défiler" },
 
     "intro.eyebrow": { es:"Bienvenidos", en:"Welcome", fr:"Bienvenue" },
-    "intro.title": { es:"Un fin de semana, no solo un día", en:"A whole weekend, not just a day", fr:"Un week-end entier, pas juste un jour" },
+    "intro.title": { es:"Un fin de semana para compartir", en:"A weekend to share", fr:"Un week-end à partager" },
     "intro.body": {
-      es:"Llevamos tiempo con ganas de este fin de semana: sidra, sobremesas largas, mar de fondo y la montaña en lo alto del valle. Hemos organizado tres días en Deva para quien quiera acompañarnos, y con una ceremonia tradicional asturiana para compartir comida, música y baile juntos. Aquí tenéis todo lo necesario para venir tranquilos: cómo llegar, dónde dormir y qué vamos a hacer.",
-      en:"We've been looking forward to this weekend for a long time: cider, long lunches, the sea close by and the mountains rising at the top of the valley. We've planned three days in Deva for anyone who'd like to join us, built around a traditional Asturian ceremony where we'll share food, music, and dancing together. Here's everything you need to come without worrying: how to get there, where to sleep, and what we'll be doing.",
-      fr:"Cela fait longtemps qu'on attend ce week-end : cidre, longs repas, la mer tout près et la montagne qui domine la vallée. On a organisé trois jours à Deva pour celles et ceux qui voudraient nous accompagner, autour d'une cérémonie traditionnelle asturienne pour partager repas, musique et danse ensemble. Voici tout ce qu'il faut pour venir l'esprit tranquille : comment arriver, où dormir, et ce qu'on va faire."
+      es:"Llevamos tiempo con ganas de este fin de semana: sidra, sobremesas largas, mar de fondo y la montaña en lo alto del valle. Hemos organizado tres días en Deva, al lado de Gijón, para quien quiera acompañarnos, y con una ceremonia tradicional asturiana para compartir comida, música y baile juntos. Aquí tenéis todo lo necesario para venir tranquilos: cómo llegar, dónde dormir y qué vamos a hacer.",
+      en:"We've been looking forward to this weekend for a long time: cider, long lunches, the sea close by and the mountains rising at the top of the valley. We've planned three days in Deva, right next to Gijón, for anyone who'd like to join us, built around a traditional Asturian ceremony where we'll share food, music, and dancing together. Here's everything you need to come without worrying: how to get there, where to sleep, and what we'll be doing.",
+      fr:"Cela fait longtemps qu'on attend ce week-end : cidre, longs repas, la mer tout près et la montagne qui domine la vallée. On a organisé trois jours à Deva, juste à côté de Gijón, pour celles et ceux qui voudraient nous accompagner, autour d'une cérémonie traditionnelle asturienne pour partager repas, musique et danse ensemble. Voici tout ce qu'il faut pour venir l'esprit tranquille : comment arriver, où dormir, et ce qu'on va faire."
     },
 
     "rsvp.eyebrow": { es:"Antes de nada", en:"First things first", fr:"Avant tout" },
@@ -593,7 +601,7 @@
     "rsvp.button": { es:"Ir al formulario", en:"Go to the form", fr:"Accéder au formulaire" },
 
     "plan.eyebrow": { es:"El plan", en:"The plan", fr:"Le programme" },
-    "plan.title": { es:"Tres días en Deva", en:"Three days in Deva", fr:"Trois jours à Deva" },
+    "plan.title": { es:"Tres días en Gijón", en:"Three days in Gijón", fr:"Trois jours à Gijón" },
     "plan.intro": {
       es:"Podéis venir solo el sábado o quedaros el fin de semana entero, alojados en el Camping de Deva. Esto es lo que tenemos pensado:",
       en:"You can come just for Saturday or stay the whole weekend at the Camping de Deva. Here's what we have planned:",
@@ -603,30 +611,30 @@
     "plan.i1.date": { es:"Vie 17", en:"Fri 17", fr:"Ven 17" },
     "plan.i1.title": { es:"Parrillada de bienvenida", en:"Welcome barbecue", fr:"Barbecue de bienvenue" },
     "plan.i1.desc": {
-      es:"Primer contacto con barbacoa, sidra y sobremesa larga, en el camping.",
-      en:"A first get-together with barbecue, cider, and a long evening at the camping.",
+      es:"Primer contacto con parrillada, sidra y sobremesa larga, en el camping.",
+      en:"A first get-together with a barbecue, cider, and a long evening at the camping.",
       fr:"Premier moment ensemble : barbecue, cidre et longue soirée au camping."
     },
     "plan.i2.date": { es:"Sáb 18 · mañana", en:"Sat 18 · morning", fr:"Sam 18 · matin" },
-    "plan.i2.title": { es:"Yoga y pádel", en:"Yoga &amp; padel", fr:"Yoga et padel" },
+    "plan.i2.title": { es:"Algún juego, tomar algo y mucho rato para estar juntos", en:"A few games, a drink, and plenty of time together", fr:"Quelques jeux, un verre et beaucoup de temps ensemble" },
     "plan.i2.desc": {
-      es:"Para quien quiera despejarse antes de la tarde grande. Yoga suave y unas palas, a vuestro ritmo.",
-      en:"For anyone who wants to clear their head before the big afternoon. Easy yoga and a bit of padel, at your own pace.",
-      fr:"Pour celles et ceux qui veulent se vider la tête avant l'après-midi. Yoga tranquille et un peu de padel, à votre rythme."
+      es:"Para quien quiera despejarse antes de la tarde grande, un paseo hacia la playa, o algún deporte a vuestro ritmo.",
+      en:"For anyone who wants to clear their head before the big afternoon: a walk down to the beach, or a bit of sport, at your own pace.",
+      fr:"Pour celles et ceux qui veulent se vider la tête avant le grand après-midi : une balade vers la plage ou un peu de sport, à votre rythme."
     },
-    "plan.i3.date": { es:"Sáb 18", en:"Sat 18", fr:"Sam 18" },
-    "plan.i3.title": { es:"Ceremonia y celebración", en:"Ceremony &amp; celebration", fr:"Cérémonie et fête" },
+    "plan.i3.date": { es:"Sáb 18 · tarde", en:"Sat 18 · afternoon", fr:"Sam 18 · après-midi" },
+    "plan.i3.title": { es:"Ceremonia y celebración en el llagar El Trole", en:"Ceremony &amp; celebration at Llagar El Trole", fr:"Cérémonie et fête au Llagar El Trole" },
     "plan.i3.desc": {
-      es:"La boda. Ceremonia, comida, sidra escanciada y fiesta hasta que el cuerpo aguante.",
-      en:"The wedding. Ceremony, lunch, poured cider, and a party for as long as everyone can keep going.",
-      fr:"Le mariage. Cérémonie, repas, cidre versé et fête tant que les jambes tiennent."
+      es:"La celebración. Música, comida, sidra escanciada y fiesta hasta que el cuerpo aguante. Nos gustaría cantar y tocar con vosotras y vosotros.",
+      en:"The celebration. Music, food, poured cider, and a party for as long as everyone can keep going. We'd love to sing and play music with you.",
+      fr:"La fête. Musique, repas, cidre versé et fête tant que les jambes tiennent. On aimerait chanter et jouer de la musique avec vous."
     },
     "plan.i4.date": { es:"Dom 19", en:"Sun 19", fr:"Dim 19" },
     "plan.i4.title": { es:"Desayuno con comentada", en:"Debrief breakfast", fr:"Petit-déjeuner debrief" },
     "plan.i4.desc": {
-      es:"Café, resumen de la noche anterior y una despedida tranquila antes de volver a casa.",
-      en:"Coffee, a recap of the night before, and an easy goodbye before heading home.",
-      fr:"Café, récap de la soirée et un au revoir tranquille avant de rentrer."
+      es:"Café, resumen de la noche anterior y una despedida tranquila antes de volver a casa. La playa está cerca para despedirse de Asturias.",
+      en:"Coffee, a recap of the night before, and an easy goodbye before heading home. The beach is close by for one last farewell to Asturias.",
+      fr:"Café, récap de la soirée et un au revoir tranquille avant de rentrer. La plage est tout près pour dire adieu aux Asturies."
     },
 
     "logistics.eyebrow": { es:"Información práctica", en:"Practical information", fr:"Informations pratiques" },
@@ -635,9 +643,9 @@
     "stay.title": { es:"Alojamiento", en:"Where to stay", fr:"Hébergement" },
     "stay.primaryLabel": { es:"Recomendado", en:"Recommended", fr:"Recommandé" },
     "stay.primaryDesc": {
-      es:"Nuestra opción para el fin de semana completo: bungalós y parcelas a un paseo del llagar. Aquí serán también la parrillada, el yoga/pádel y el desayuno del domingo.",
-      en:"Our pick for the full weekend: bungalows and pitches a short walk from the llagar. It's also where the barbecue, yoga/padel, and Sunday breakfast will happen.",
-      fr:"Notre choix pour le week-end complet : bungalows et emplacements à deux pas du llagar. C'est aussi là qu'auront lieu le barbecue, le yoga/padel et le petit-déjeuner du dimanche."
+      es:"Nuestra opción para el fin de semana completo: bungalós y parcelas a un paseo del llagar, y el punto de encuentro para todo lo que haremos fuera de la ceremonia.",
+      en:"Our pick for the full weekend: bungalows and pitches a short walk from the llagar, and the base for everything happening around the ceremony.",
+      fr:"Notre choix pour le week-end complet : bungalows et emplacements à deux pas du llagar, et le point de ralliement pour tout ce qui se passe autour de la cérémonie."
     },
     "stay.altIntro": {
       es:"Si preferís algo más urbano, Gijón está muy cerca y tiene muchas opciones, entre ellas:",
