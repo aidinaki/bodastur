@@ -72,26 +72,29 @@
     margin:0 0 0.9rem;
   }
 
-  /* ---------- fixed atmosphere backdrop ---------- */
+  /* ---------- fixed meadow backdrop ----------
+     Prado verde (estilo asturiano) detrás del hero, con un velo claro encima
+     para la legibilidad del texto. Para alojar la web de forma permanente,
+     descarga una foto en alta resolución y sustituye la url() por la ruta
+     local, p. ej. url("assets/prados-asturias.jpg").
+     Imagen actual: foto de Clovis Wood en Unsplash (uso libre, Unsplash License). */
   .atmosphere{
     position:fixed;
     inset:0;
     z-index:-1;
     overflow:hidden;
-    background:linear-gradient(180deg,
-      var(--sky) 0%,
-      var(--blue) 30%,
-      color-mix(in srgb, var(--blue) 35%, var(--paper)) 48%,
-      var(--paper) 62%,
-      var(--paper) 100%);
-  }
-  .atmosphere svg{ position:absolute; left:0; width:100%; height:auto; }
-  .ridge-far{   top:20vh;  opacity:0.55; }
-  .ridge-mid{   top:32vh;  opacity:0.75; }
-  .ridge-near{  top:40vh;  opacity:1; }
-  .sea-glint{ position:absolute; top:6vh; left:0; width:100%; height:40vh; opacity:0.5;
-    background:repeating-linear-gradient(100deg, rgba(255,255,255,0.10) 0 2px, transparent 2px 60px);
-    mix-blend-mode:overlay;
+    background-color:#5e7f4e; /* verde de reserva si la imagen no carga */
+    background-image:
+      linear-gradient(180deg,
+        rgba(244,246,241,0.60) 0%,
+        rgba(244,246,241,0.34) 28%,
+        rgba(244,246,241,0.30) 54%,
+        rgba(244,246,241,0.48) 80%,
+        rgba(244,246,241,0.80) 100%),
+      url("https://images.unsplash.com/photo-1772215842204-3e5838af499c?auto=format&fit=crop&w=2400&q=72");
+    background-repeat:no-repeat, no-repeat;
+    background-size:cover, cover;
+    background-position:center, center;
   }
 
   /* ---------- nav ---------- */
@@ -199,21 +202,23 @@
     font-style:italic;
     font-weight:500;
     color:var(--ink);
-    text-shadow:0 2px 30px rgba(62,122,144,0.18);
+    text-shadow:0 1px 3px rgba(255,255,255,0.65), 0 2px 30px rgba(62,122,144,0.18);
   }
   .hero-date{
     margin-top:1.1rem;
     font-family:"Work Sans", sans-serif;
     font-size:clamp(1rem, 0.4vw + 0.95rem, 1.2rem);
-    font-weight:500;
+    font-weight:600;
     letter-spacing:0.06em;
     color:var(--blue-deep);
+    text-shadow:0 1px 2px rgba(255,255,255,0.7);
   }
   .hero-sub{
     margin:1.8rem 0 0;
     max-width:36rem;
     font-size:1.08rem;
-    color:var(--ink-soft);
+    color:var(--ink);
+    text-shadow:0 1px 2px rgba(255,255,255,0.7);
   }
   .hero-scroll{
     margin-top:3.2rem;
@@ -239,6 +244,7 @@
 
   .section{
     padding:clamp(3.5rem, 6vw, 6rem) clamp(1.2rem, 4vw, 3rem);
+    background:var(--paper);
   }
   .card{
     max-width:46rem;
@@ -412,21 +418,11 @@
     font-size:0.8rem;
     letter-spacing:0.04em;
     color:var(--ink-soft);
+    background:var(--paper);
   }
 </style>
 
-<div class="atmosphere" aria-hidden="true">
-  <div class="sea-glint" data-parallax="0.15"></div>
-  <svg data-parallax="0.25" class="ridge-far" viewBox="0 0 1440 260" preserveAspectRatio="none">
-    <path fill="var(--forest-light)" d="M0,180 L100,140 220,190 340,120 460,170 600,110 740,175 880,130 1020,185 1160,125 1300,170 1440,140 1440,260 0,260 Z"/>
-  </svg>
-  <svg data-parallax="0.4" class="ridge-mid" viewBox="0 0 1440 260" preserveAspectRatio="none">
-    <path fill="var(--forest)" d="M0,210 L120,150 260,205 380,130 520,195 660,145 800,200 940,150 1080,210 1220,160 1360,200 1440,175 1440,260 0,260 Z"/>
-  </svg>
-  <svg data-parallax="0.6" class="ridge-near" viewBox="0 0 1440 220" preserveAspectRatio="none">
-    <path fill="var(--paper)" d="M0,150 L110,190 240,120 360,175 500,110 640,180 780,130 920,190 1060,140 1200,185 1320,150 1440,175 1440,220 0,220 Z"/>
-  </svg>
-</div>
+<div class="atmosphere" aria-hidden="true"></div>
 
 <header class="nav" id="siteNav">
   <span class="nav-mark">Aida e Iñaki</span>
@@ -437,7 +433,7 @@
       <button type="button" data-lang="fr" aria-pressed="false">FR</button>
     </div>
     <div class="nav-cta-wrap">
-      <a class="nav-cta" href="#" data-i18n="nav.rsvp" data-rsvp-link>Confirmar asistencia</a>
+      <a class="nav-cta" href="https://forms.gle/rDuEgEkVCYd3MmqX6" target="_blank" rel="noopener noreferrer" data-i18n="nav.rsvp" data-rsvp-link>Confirmar asistencia</a>
       <span class="nav-cta-note" data-i18n="nav.rsvpNote">cuanto antes mejor para reservas de camping</span>
     </div>
   </div>
@@ -467,7 +463,7 @@
       <p class="eyebrow" data-i18n="rsvp.eyebrow">Antes de nada</p>
       <h2 data-i18n="rsvp.title">Confirmadnos que venís</h2>
       <p data-i18n="rsvp.body">Rellenad el formulario con vuestros datos, si venís acompañados y si tenéis alguna alergia o necesidad especial. Nos ayuda muchísimo a organizarlo todo con tiempo.</p>
-      <a class="rsvp-btn" href="#" data-i18n="rsvp.button" data-rsvp-link>Ir al formulario</a>
+      <a class="rsvp-btn" href="https://forms.gle/rDuEgEkVCYd3MmqX6" target="_blank" rel="noopener noreferrer" data-i18n="rsvp.button" data-rsvp-link>Ir al formulario</a>
     </div>
   </section>
 
@@ -560,7 +556,7 @@
   <section class="section closing">
     <h2 class="reveal" data-i18n="closing.title">Nos vemos en Asturias</h2>
     <p class="reveal" data-i18n="closing.body">Cualquier duda, escribidnos sin más. Estamos deseando compartir esto con vosotros.</p>
-    <a class="rsvp-btn reveal" href="#" data-i18n="rsvp.button" data-rsvp-link>Ir al formulario</a>
+    <a class="rsvp-btn reveal" href="https://forms.gle/rDuEgEkVCYd3MmqX6" target="_blank" rel="noopener noreferrer" data-i18n="rsvp.button" data-rsvp-link>Ir al formulario</a>
     <p class="signature reveal" data-i18n="closing.signature">Con todo el cariño, Aida e Iñaki</p>
   </section>
 </main>
@@ -767,9 +763,12 @@
     }, 3000);
   }
 
-  /* RSVP form link placeholder — replace href="#" below with the real form URL */
+  /* RSVP form link — Google Form */
+  var RSVP_URL = "https://forms.gle/rDuEgEkVCYd3MmqX6";
   document.querySelectorAll("[data-rsvp-link]").forEach(function(a){
-    a.setAttribute("href", "#");
+    a.setAttribute("href", RSVP_URL);
+    a.setAttribute("target", "_blank");
+    a.setAttribute("rel", "noopener noreferrer");
   });
 })();
 </script>
