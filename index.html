@@ -73,11 +73,10 @@
   }
 
   /* ---------- fixed meadow backdrop ----------
-     Prado verde (estilo asturiano) detrás del hero, con un velo claro encima
-     para la legibilidad del texto. Para alojar la web de forma permanente,
-     descarga una foto en alta resolución y sustituye la url() por la ruta
-     local, p. ej. url("assets/prados-asturias.jpg").
-     Imagen actual: foto de Clovis Wood en Unsplash (uso libre, Unsplash License). */
+     Foto de los Lagos de Covadonga (Asturias) detrás del hero, con un velo
+     claro encima para la legibilidad del texto. El archivo "fondo-covadonga.jpg"
+     debe ir en la misma carpeta que este HTML (o ajusta la ruta de la url(),
+     p. ej. "assets/fondo-covadonga.jpg", si lo mueves a una subcarpeta). */
   .atmosphere{
     position:fixed;
     inset:0;
@@ -91,7 +90,7 @@
         rgba(244,246,241,0.30) 54%,
         rgba(244,246,241,0.48) 80%,
         rgba(244,246,241,0.80) 100%),
-      url("https://images.unsplash.com/photo-1772215842204-3e5838af499c?auto=format&fit=crop&w=2400&q=72");
+      url("fondo-covadonga.jpg");
     background-repeat:no-repeat, no-repeat;
     background-size:cover, cover;
     background-position:center, center;
